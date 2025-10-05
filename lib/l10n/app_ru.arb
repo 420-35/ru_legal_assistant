@@ -1,0 +1,9 @@
+{
+  "appName": "Юридический помощник",
+  "selectAdvocate": "Выберите адвоката",
+  "annaName": "Анна",
+  "alexanderName": "Александр",
+  "speakHint": "Опишите вашу ситуацию...",
+  "micButton": "Голосовой ввод",
+  "saveDialog": "Сохранить диалог"
+}

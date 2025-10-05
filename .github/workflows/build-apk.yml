@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 name: Build APK
 
 on:
@@ -27,7 +24,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'
+          flutter-version: '3.24.0'  # или 'stable'
           channel: 'stable'
 
       - name: Install dependencies
@@ -42,4 +39,3 @@ jobs:
           name: legal-assistant-apk
           path: build/app/outputs/flutter-apk/app-release.apk
           retention-days: 30
->>>>>>> 8ac38a0 (Fix workflow folder name: github → .github)

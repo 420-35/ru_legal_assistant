@@ -3,14 +3,10 @@ name: Build APK
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
-    name: Build Android APK
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,7 +20,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'
+          flutter-version: '3.24.0'  # ← содержит Dart 3.5.0
           channel: 'stable'
 
       - name: Install dependencies
@@ -33,9 +29,8 @@ jobs:
       - name: Build release APK
         run: flutter build apk --release
 
-      - name: Upload APK as artifact
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: legal-assistant-apk
           path: build/app/outputs/flutter-apk/app-release.apk
-          retention-days: 30

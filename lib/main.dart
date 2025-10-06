@@ -10,7 +10,8 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Инициализация DI
-  await configureDependencies();
+  final tts = TTSService();
+  final stt = STTService();
 
   // Запрос разрешений при первом запуске
   await _requestPermissions();
